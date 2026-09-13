@@ -10,7 +10,7 @@ export async function POST(request:Request){
     if(typeof password!=="string"||password.length>64) return new Response(null,{status:400,headers:privateHeaders});
     const now=Date.now(), window=Math.floor(now/900000);
     const client=await digest(VAULT_KEY+":"+(request.headers.get("cf-connecting-ip")||"local"));
-    const counters=await DB.batch([
+    const counters=await DB.batch<{count:number}>([
       DB.prepare("INSERT INTO attempts (bucket,count) VALUES (?,1) ON CONFLICT(bucket) DO UPDATE SET count=count+1 RETURNING count").bind(client+":"+window),
       DB.prepare("INSERT INTO attempts (bucket,count) VALUES (?,1) ON CONFLICT(bucket) DO UPDATE SET count=count+1 RETURNING count").bind("global:"+window)
     ]);
