@@ -1,4 +1,4 @@
-# A little light
+# GongGong
 
 A responsive visual journal with server-side password verification, encrypted private content, expiring sessions, and login rate limits.
 
