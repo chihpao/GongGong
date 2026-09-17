@@ -1,4 +1,5 @@
-const API = "https://gonggong.chihpao.chatgpt.site/api/pages";
+const isLocalPreview = location.hostname === "127.0.0.1" || location.hostname === "localhost";
+const API = isLocalPreview ? "/api/pages" : "https://gonggong.chihpao.chatgpt.site/api/pages";
 const entry = document.querySelector("#entry");
 const story = document.querySelector("#story");
 const form = document.querySelector("#unlock");
