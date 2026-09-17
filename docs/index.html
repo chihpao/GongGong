@@ -1,3 +1,44 @@
 <!doctype html>
-<html lang="zh-Hant"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex,nofollow"><meta name="referrer" content="no-referrer"><meta http-equiv="Content-Security-Policy" content="default-src 'self'; connect-src https://gonggong.chihpao.chatgpt.site; img-src 'self' blob:; style-src 'self'; script-src 'self'; base-uri 'none'; form-action 'none'"><title>GongGong</title><link rel="icon" href="favicon.svg"><link rel="stylesheet" href="style.css"><script src="app.js" defer></script></head>
-<body><main class="entry" id="entry"><div class="entry-top"><span>GongGong</span></div><div class="entry-glow" aria-hidden="true"></div><section class="entry-content"><p class="eyebrow">留給妳的一小片光</p><h1>有一個地方，<br>想讓妳走進來。</h1><form class="entry-form" id="unlock"><label for="password">輸入密碼</label><div class="entry-controls"><input id="password" name="password" type="password" inputmode="numeric" autocomplete="current-password" maxlength="64" required placeholder="••••" aria-describedby="error"><button type="submit">走進來 ↗</button></div><p id="error" class="entry-error" role="status"></p></form></section><div class="entry-bottom"><span>一點光，一些片刻。</span></div></main><main id="story" class="story" hidden></main></body></html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="robots" content="noindex,nofollow">
+  <meta name="referrer" content="no-referrer">
+  <meta name="description" content="留給龔龔的一段私人影像敘事。">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; connect-src https://gonggong.chihpao.chatgpt.site; img-src 'self' blob:; style-src 'self'; script-src 'self'; base-uri 'none'; form-action 'none'">
+  <title>GongGong</title>
+  <link rel="icon" href="favicon.svg">
+  <link rel="stylesheet" href="style.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <div class="scroll-progress" id="scroll-progress" aria-hidden="true"></div>
+  <div class="custom-cursor" id="custom-cursor" aria-hidden="true"></div>
+  <main class="entry" id="entry">
+    <header class="entry-nav">
+      <span class="brand-mark">GongGong</span>
+      <span class="entry-index">PRIVATE ARCHIVE · 2026</span>
+    </header>
+    <section class="entry-content" aria-labelledby="entry-title">
+      <div class="entry-copy">
+        <p class="eyebrow">留給妳的一小片光</p>
+        <h1 id="entry-title">有一個地方，<br>想讓妳走進來。</h1>
+        <p class="entry-note">一些片刻，一些關於妳的感覺。</p>
+      </div>
+      <form class="entry-form" id="unlock">
+        <label for="password">閱讀密碼</label>
+        <div class="entry-controls">
+          <input id="password" name="password" type="password" inputmode="numeric" autocomplete="current-password" maxlength="64" required placeholder="••••" aria-describedby="error">
+          <button type="submit"><span>走進來</span><span aria-hidden="true">↗</span></button>
+        </div>
+        <p id="error" class="entry-error" role="status" aria-live="polite"></p>
+      </form>
+    </section>
+    <footer class="entry-footer">
+      <span>FROM AFTERNOON</span><span class="entry-line" aria-hidden="true"></span><span>TO NIGHT</span>
+    </footer>
+  </main>
+  <main id="story" class="story" hidden></main>
+</body>
+</html>
